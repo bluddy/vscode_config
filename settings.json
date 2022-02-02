@@ -1,6 +1,11 @@
 {
-    "workbench.colorTheme": "Solarized Light",
-    "python.defaultInterpreterPath": "C:\\Python310\\python.exe",
+  "workbench.colorTheme": "Solarized Light",
+
+  "python.defaultInterpreterPath": "C:\\Python310\\python.exe",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.formatting.provider":"autopep8",
+  "python.formatting.autopep8Args": ["--max-line-length", "120"],
+  "python.linting.pycodestyleArgs": ["--ignore=E501"],
 
   "vim.easymotion": true,
   "vim.incsearch": true,
@@ -21,14 +26,26 @@
     {
       "before": ["<C-n>"],
       "commands": [":nohl"]
-    }
+    },
+    {
+      "before": ["-"],
+      "commands": ["workbench.view.explorer"]
+    },
+  ],
+  "vim.commandLineModeKeyBindings": [
+    {
+      "before": ["W", "<CR>"],
+      "after": ["w", "<CR>"],
+    },
   ],
   "vim.leader": "<space>",
   "vim.handleKeys": {
     "<C-a>": false,
-    "<C-f>": false
+    "<C-f>": true
   },
   "editor.suggestSelection": "first",
+  "editor.formatOnSaveTimeout": 750,
+
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "git.autofetch": true,
   "terminal.integrated.profiles.windows": {
@@ -43,4 +60,8 @@
   "projectManager.git.baseFolders": [
     "c:\\CipiaDev"
   ],
+  "window.zoomLevel": -1,
+  "vim.showMarksInGutter": true,
+  "vim.sneak": true,
+  "security.workspace.trust.untrustedFiles": "open",
 }
